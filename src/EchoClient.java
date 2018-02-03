@@ -24,7 +24,7 @@ public class EchoClient {
         byte buffer[] = new byte[BUFFER_SIZE];
 
         while ((messageSize = inputStream.read(buffer)) != -1) {
-            outputStream.write(buffer, 0, messageSize);
+            outputStream.write(buffer, 0, messageSize);　// 0から始まるバイト配列を書き込む
             System.out.println(getNowTime()+":Echo server respond");
         }
 
